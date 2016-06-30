@@ -1,0 +1,36 @@
+<h1>Please Fill the Request Form</h1>
+<p>Find me in app/views/welcome/request.html.erb</p>
+
+<html>
+
+<head>
+  <title>Request Page</title>
+</head>
+<body>
+<p>Inspired by a need for Tux plushes.</p>
+
+<div>
+<!--  <form action="success.php"> -->
+  <%= form_tag("/success", method: "post") do %>
+    <%= label_tag(:seller, "Requesting from") %>
+    <%= text_field_tag(:seller) %><br>
+
+    <%= label_tag(:lname, "Last Name") %>
+    <%= text_field_tag(:lname) %><br>
+
+    <label for="choice">Dropdown that might be used later</label>
+    <select id="choice" name="choice">
+      <option value="1">one</option>
+      <option value="2">two</option>
+      <option value="3">three</option>
+    </select><br>
+
+    <!--<textarea name="details"></textarea>-->
+    <%= text_area "post", "body"%>
+  
+    <input type="submit" value="Submit">
+  <!--</form>-->
+  <% end %>
+</div>
+
+</body>
