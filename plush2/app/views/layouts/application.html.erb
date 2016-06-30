@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style type="text/css">
+  body {
+    background-image: url("http://www.photos-public-domain.com/wp-content/uploads/2012/02/blue-fleece-faux-sherpa-wool-fabric-texture.jpg");
+    background-size: 100%;
+  }
+
+  p {
+    margin-right: 150px;
+    margin-left: 80px;
+  }
+
+input[type=text], select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 3px solid #ccc;
+    border-radius: 4px;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    box-sizing: border-box;
+}
+
+input[type=text]:focus {
+    border: 3px solid #555;
+}
+
+input[type=submit] {
+    width: 100%;
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type=submit]:hover {
+    background-color: #45a049;
+}
+
+textarea {
+    resize: vertical; /* user can resize vertically, but width is fixed */
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 3px solid #ccc;
+    border-radius: 4px;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    box-sizing: border-box;
+}
+
+input[type=textarea]:focus {
+    border: 3px solid #555;
+}
+
+input[type=password], select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 3px solid #ccc;
+    border-radius: 4px;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    box-sizing: border-box;
+}
+
+input[type=password]:focus {
+    border: 3px solid #555;
+}
+
+input[type=email], select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 3px solid #ccc;
+    border-radius: 4px;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    box-sizing: border-box;
+}
+
+input[type=email]:focus {
+    border: 3px solid #555;
+}
+
+form {
+    width: 25%;
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+}
+
+  </style>
+  <title>Custom Plushes (Plush2)</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+    <h1>Ready, Set, Cuddle!</h1>
+    <p>A good place to get or sell all the plushes you will ever need.<br>
+    <i>Please be mindful of copyright laws.</i></p>
+    <p class="notice"><%= notice %></p>
+    <p class="alert"><%= alert %></p>
+
+<%= yield %>
+
+</body>
+</html>
