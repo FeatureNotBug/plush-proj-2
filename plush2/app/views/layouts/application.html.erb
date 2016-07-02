@@ -104,6 +104,13 @@ form {
 }
 
   </style>
+
+  <% if (user_signed_in?) then %> <div id="navbar">
+    <%= render 'layouts/tologin'%></div> 
+  <% else %> <div id="navbar">
+    <%= render 'layouts/tologout'%></div> 
+  <% end %>
+
   <title>Custom Plushes (Plush2)</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
