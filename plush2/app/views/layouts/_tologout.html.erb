@@ -30,6 +30,7 @@ li a:hover {
 <ul>
   <li><%= link_to 'Home', root_path %></li>
   <li><%= link_to 'Browse', root_path %></li>
+  <li><%= link_to "Inbox", mailbox_inbox_path %></li>
   <li style="float:right"><%= link_to 'Logout', destroy_user_session_path, :method => :delete %> </li>
 </ul>
 
