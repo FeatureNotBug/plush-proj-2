@@ -1,4 +1,5 @@
-<% @receipts.each do |receipt| %>
+<% if @receipts.present? %>
+  <% @receipts.each do |receipt| %>
     <% message = receipt.message %>
     <div class="media">
       <div class="media-left">
@@ -16,4 +17,9 @@
         <%= message.body %>
       </div>
     </div>
+  <% end %>
+<% else %>
+  <div>
+    <p>No messages</p>
+  </div>
 <% end %>
