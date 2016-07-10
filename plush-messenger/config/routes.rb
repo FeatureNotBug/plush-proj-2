@@ -2,6 +2,8 @@ Rails.application.routes.draw do
   devise_for :users
   root 'welcome#index'
 
+  resources :users
+
   # mailbox folder routes
   get "mailbox/inbox" => "mailbox#inbox", as: :mailbox_inbox
   get "mailbox/sent" => "mailbox#sent", as: :mailbox_sent
