@@ -1,0 +1,4 @@
+<h1>Browse all users</h1>
+<% User.all.each do |user| %>
+  <%= link_to user.name, user %><br>
+<% end %>
