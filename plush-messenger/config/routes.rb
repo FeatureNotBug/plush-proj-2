@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  resources :requests
+  get 'requests/new' => 'requests#new'
+
   devise_for :users
   root 'welcome#index'
   get 'welcome/browse'

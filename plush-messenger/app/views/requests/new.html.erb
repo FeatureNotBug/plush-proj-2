@@ -1,3 +1,21 @@
+<head>
+<style type='text/css'>
+  
+</style>
+</head>
+
 <h1>Request</h1>
 (will probably try to autofill following) <br>
+<%= form_for(Request.new) do |f| %>
 
+  <%= f.label :from, 'From' %><br>
+  <%= text_field_tag :from %><br>
+    
+  <%= f.label :width, 'Width' %><br>
+  <%= f.text_field :width %><br>
+
+  <%= f.label :details, 'Additional Specifications' %><br>
+  <%= f.text_area :details %>
+
+  <%= f.submit "Send" %>
+<% end %>
