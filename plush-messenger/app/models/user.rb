@@ -7,6 +7,8 @@ class User < ActiveRecord::Base
 
   acts_as_messageable
 
+  has_one :about
+
   def mailboxer_name
     self.name
   end
