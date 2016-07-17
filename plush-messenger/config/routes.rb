@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   devise_for :users
   root 'welcome#index'
   get 'welcome/browse'
+  get 'users/edit_profile'
 
   resources :users
 

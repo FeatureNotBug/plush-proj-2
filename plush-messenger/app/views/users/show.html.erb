@@ -1,4 +1,8 @@
 <h1><%= @user.name %>'s Profile</h1>
+<% if @user == current_user %>
+  <%= link_to 'Edit Profile', users_edit_profile_path %>
+<% end %>
+
 <p>Contact: <%= @user.email %></p>
-<p>Request: <%= link_to 'Request from this user', requests_new_path %></p>
+<p>Interested? <%= link_to 'Initiate contact with this user', requests_new_path %></p>
 <p>Include: Gallery, Ratings, Reviews, About/Intro...</p>
