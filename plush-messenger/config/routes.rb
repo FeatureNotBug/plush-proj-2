@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
   resources :requests
+  resources :abouts
+
   get 'requests/new' => 'requests#new'
 
   devise_for :users

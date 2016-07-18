@@ -1,12 +1,15 @@
 <head>
 <style type='text/css'>
-  
+div {
+  width: 50%;
+}  
 </style>
 </head>
 
 <h1>Request</h1>
 (will probably try to autofill following) <br>
 <p>Give us some details to give you a quote!</p>
+<div>
 <%= form_for(Request.new) do |f| %>
 
   <%= f.label :from, 'From' %><br>
@@ -23,3 +26,4 @@
 
   <%= f.submit "Send" %>
 <% end %>
+</div>

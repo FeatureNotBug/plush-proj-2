@@ -1,9 +1,26 @@
+<head>
+<style type="text/css">
+div {
+  width: 50%;
+}
+</style>
+</head>
+
 <h1>A buttload of forms will go here</h1>
-<h2>About me</h2>
-<p>Add a friendly intro about yourself!</p>
+<div>
+<%= form_for(About.new) do |f| %>
+  <h2>About me</h2>
+  <p>Add a friendly intro about yourself!</p>
+  <%= f.label :aboutme, 'Add a friendly intro about yourself!' %><br>
+  <%= f.text_area :aboutme %>
 
-<h2>Upload to gallery</h2>
-I might actually want this on a separate page...
+  <h2>Upload to gallery</h2>
+  I might actually want this on a separate page...
 
-<h2>Additional links</h2>
-<p>Got other work you'd like to show?  Add a link below</p>
+  <h2>Additional links</h2>
+  <p>Got other work you'd like to show?  Add a link below</p>
+  <input type="textbox" name="about[links][]" >
+
+  <%= f.submit "Update", class:"btn btn-primary" %>
+<% end %>
+</div>
