@@ -22,9 +22,10 @@ Also needed:
 - User search
 - User sort (by price?  Need to think of how to calculate that)
 - review system
-- user avatars
-- clean up bugs; why is the highlighting wonky?  Why does compose glitch like that?
 
 Things to consider:
 - Forums? (Have to figure out how to set that up...)
 - User rating?
+  - BUG: doesn't show up on init page load
+- clean up bugs; why is the highlighting wonky?  Why does compose glitch like that?
+- user avatars
