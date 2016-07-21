@@ -6,3 +6,8 @@
 <p>Contact: <%= @user.email %></p>
 <p>Interested? <%= link_to 'Initiate contact with this user', requests_new_path %></p>
 <p>Include: Gallery, Ratings, Reviews, About/Intro...</p>
+
+<h3>Ratings:</h3>
+As a Seller: <%= rating_for @user, "as_seller", disable_after_rate: false, imdb_avg: true %>
+<br>
+As a Buyer: <%= rating_for @user, "as_buyer", disable_after_rate: false, imdb_avg: true %>

@@ -6,6 +6,8 @@ class User < ActiveRecord::Base
          :confirmable
 
   acts_as_messageable
+  ratyrate_rateable 'as_buyer', 'as_seller'
+  ratyrate_rater
 
   has_one :about
 

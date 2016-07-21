@@ -11,6 +11,8 @@ Rails.application.routes.draw do
 
   resources :users
 
+  post '/rate' => 'rater#create', :as => 'rate'
+
   # mailbox folder routes
   get "mailbox/inbox" => "mailbox#inbox", as: :mailbox_inbox
   get "mailbox/sent" => "mailbox#sent", as: :mailbox_sent
