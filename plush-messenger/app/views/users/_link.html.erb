@@ -1,0 +1,8 @@
+<div class="link">
+  <% fields_for "user[link_attributes][]", link do |f| %>
+    <p>
+    Link: <%= f.text_field :link %>
+    <%= link_to_function "remove", "$(this).up('.task').remove()" %>
+    </p>
+  <% end %>
+</div>
