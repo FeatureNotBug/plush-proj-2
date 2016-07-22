@@ -1,3 +1,4 @@
+<%= javascript_include_tag 'ratyrate.js', "data-turbolinks-track" => false %>
 <h1><%= @user.name %>'s Profile</h1>
 <% if @user == current_user %>
   <%= link_to 'Edit Profile', users_edit_profile_path %>
