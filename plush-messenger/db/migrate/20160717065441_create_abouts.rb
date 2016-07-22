@@ -3,6 +3,7 @@ class CreateAbouts < ActiveRecord::Migration
     create_table :abouts do |t|
       t.text :aboutme
       t.text :links
+      t.integer :user_id
     end
   end
 end

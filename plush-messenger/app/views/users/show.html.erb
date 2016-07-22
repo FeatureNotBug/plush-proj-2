@@ -12,3 +12,6 @@
 As a Seller: <%= rating_for @user, "as_seller", disable_after_rate: false, enable_half: true %>
 <br>
 As a Buyer: <%= rating_for @user, "as_buyer", disable_after_rate: false, enable_half: true %>
+
+<h3>About me:</h3>
+<%= @user.about %>

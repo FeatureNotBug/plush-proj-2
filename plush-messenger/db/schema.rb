@@ -14,8 +14,9 @@
 ActiveRecord::Schema.define(version: 20160720231018) do
 
   create_table "abouts", force: :cascade do |t|
-    t.text "aboutme"
-    t.text "links"
+    t.text    "aboutme"
+    t.text    "links"
+    t.integer "user_id"
   end
 
   create_table "average_caches", force: :cascade do |t|
