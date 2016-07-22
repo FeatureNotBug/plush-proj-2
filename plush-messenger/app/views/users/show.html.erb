@@ -5,7 +5,9 @@
 <% end %>
 
 <p>Contact: <%= @user.email %></p>
-<p>Interested? <%= link_to 'Initiate contact with this user', requests_new_path %></p>
+<% if @user != current_user %>
+  <p>Interested? <%= link_to 'Initiate contact with this user', requests_new_path %></p>
+<% end %>
 <p>Include: Gallery, Ratings, Reviews, About/Intro...</p>
 
 <h3>Ratings:</h3>
