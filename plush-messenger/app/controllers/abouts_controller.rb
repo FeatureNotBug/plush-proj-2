@@ -7,12 +7,21 @@ class AboutsController < ApplicationController
     @about = About.new
   end
 
+  def edit 
+    @about = About.find(params[:id])
+  end
+
   def create
-    @about = About.new(params[:about])
+    @about = About.new(about_params)
     if @about.save
-      redirect_to users_edit_profile_path, :notice => "Profile About updated"
+      redirect_to users_edit_profile_path, :notice => "Profile updated"
     else
       
     end
+  end
+
+  private
+  def about_params
+    params.require(:about).permit(:aboutme, :links)
   end
 end
