@@ -4,13 +4,15 @@ div {
   width: 50%;
 }
 </style>
-<script>$("#addNewLink").on("click", function() {
-  return $("#link_fields").append($("#new_link_form").html());
-});
+<script>
+  $("#addNewLink").on("click", function() {
+    return $("#link_fields").append($("#new_link_form").html());
+  });
 
-this.removeLink = function(element) {
-  return element.parent().remove();
-};</script>
+  this.removeLink = function(element) {
+    return element.parent().remove();
+  };
+</script>
 </head>
 
 <h1>A buttload of forms will go here</h1>
