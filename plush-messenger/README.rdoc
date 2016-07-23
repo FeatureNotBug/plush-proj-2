@@ -1,8 +1,5 @@
 == README
 
-Simple rails app that demonstrates how to create a private messaging system.
+Simple rails app using devise, mailboxer, and ratyrate.  I don't know how you got here but you probably don't want to stay long because tons of things don't work here.
 
-Feel free to clone this repo and if you have improvements, also feel free to submit a PR. You can read the tutorial
-at http://goo.gl/rVasxY
-
-== Thanks!
+Well, toodles!
