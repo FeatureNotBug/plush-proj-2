@@ -33,6 +33,6 @@ class AboutsController < ApplicationController
 
   private
   def about_params
-    params.require(:about).permit(:aboutme, :links)
+    params.require(:about).permit(:aboutme, {:links=>[]})
   end
 end
