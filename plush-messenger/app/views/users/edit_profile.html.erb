@@ -47,15 +47,15 @@ div {
 
     <h2>Additional links</h2>
     <p>Got other work you'd like to show?  Add a link below</p>
-    <% current_user.about.links do |link| %>
-<%= text_field_tag '"about[links][]', nil, placeholder: link %>
+    <% current_user.about.links.each do |link| %>
+      <%= label_tag "Link" %>
+      <%= text_field_tag 'about[links][]', link, placeholder: link %>
     <% end %>
-    <p>DERP</p>
-    <!--<input type="textbox" name="about[links][]" >-->
-<div id="link_fields">
-    <%= render partial: "link_field" %>
+
+    <div id="link_fields">
+      <%= render partial: "link_field" %>
+    </div>
     <a href="javascript:;" id="addNewLink">Add New Link</a>
-</div>
 
     <%= f.submit "Update", class:"btn btn-primary" %>
   <% end %>
