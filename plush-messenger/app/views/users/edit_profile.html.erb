@@ -4,6 +4,13 @@ div {
   width: 50%;
 }
 </style>
+<script>$("#addNewLink").on("click", function() {
+  return $("#link_fields").append($("#new_link_form").html());
+});
+
+this.removeLink = function(element) {
+  return element.parent().remove();
+};</script>
 </head>
 
 <h1>A buttload of forms will go here</h1>
@@ -38,15 +45,21 @@ div {
 
     <h2>Additional links</h2>
     <p>Got other work you'd like to show?  Add a link below</p>
-    <input type="textbox" name="about[links][]" >
-
+    <% current_user.about.links do |link| %>
+<%= text_field_tag '"about[links][]', nil, placeholder: link %>
+    <% end %>
+    <p>DERP</p>
+    <!--<input type="textbox" name="about[links][]" >-->
+<div id="link_fields">
+    <%= render partial: "link_field" %>
     <a href="javascript:;" id="addNewLink">Add New Link</a>
+</div>
 
     <%= f.submit "Update", class:"btn btn-primary" %>
   <% end %>
 <% end %>
 
 <div style="display: none;", id="new_link_form">
-  <%= render partial: "linkfield" %>
+  <%= render partial: "link_field", locals: {about: false} %>
 </div>
 </div>
