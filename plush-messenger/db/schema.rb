@@ -15,7 +15,7 @@ ActiveRecord::Schema.define(version: 20160720231018) do
 
   create_table "abouts", force: :cascade do |t|
     t.text    "aboutme"
-    t.text    "links"
+    t.text    "links",   default: "--- []\n"
     t.integer "user_id"
   end
 
