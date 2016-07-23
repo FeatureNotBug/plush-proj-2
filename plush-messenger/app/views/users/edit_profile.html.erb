@@ -40,7 +40,13 @@ div {
     <p>Got other work you'd like to show?  Add a link below</p>
     <input type="textbox" name="about[links][]" >
 
+    <a href="javascript:;" id="addNewLink">Add New Link</a>
+
     <%= f.submit "Update", class:"btn btn-primary" %>
   <% end %>
 <% end %>
+
+<div style="display: none;", id="new_link_form">
+  <%= render partial: "linkfield" %>
+</div>
 </div>
