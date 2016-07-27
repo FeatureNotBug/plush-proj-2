@@ -23,15 +23,17 @@ Rails.application.routes.draw do
   get "mailbox/trash" => "mailbox#trash", as: :mailbox_trash
 
   # conversations
-  resources :conversations, only: [:index, :show, :destroy]
-=begin
-  resources :conversations do
+  resources :conversations, only: [:index, :show, :destroy] do
     member do
-      post :reply
+      post :restore
       post :trash
       post :untrash
+      post :mark_as_read
+      post :reply
+    end
+    collection do
+      delete :empty_trash
     end
   end
-=end
 
 end
