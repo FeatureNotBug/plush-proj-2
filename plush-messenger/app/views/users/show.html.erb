@@ -9,6 +9,14 @@
   <p>Interested? <%= link_to 'Initiate contact with this user', requests_new_path %></p>
 <% end %>
 <p>Include: Gallery, Ratings, Reviews, About/Intro...</p>
+  <p>Interested? <%= link_to 'Initiate contact with this user', new_message_path %></p>
+<!-- below is a form that you may remove -->
+<%= form_tag("/messages/send_message", method: "post", url: send_message_path) do  %>
+<%= hidden_field_tag :user_id, "#{@user.id}" %>
+<%= text_field_tag :subject, nil, :class => 'form-control', :placeholder => "Subject" %>
+<%= text_area_tag :message, nil, :class => 'form-control', :placeholder => "Message" %>
+<%= submit_tag "Submit", :class => "btn btn-primary" %>
+<% end %>
 
 <h3>Ratings:</h3>
 As a Seller: <%= rating_for @user, "as_seller", disable_after_rate: false, enable_half: true %>

@@ -14,7 +14,8 @@
 // require jquery.turbolinks
 //= require jquery_ujs
 //= require abouts
+//= require messages
 //= require chosen-jquery
-//= require turbolinks
+// require turbolinks
 //= require_tree .
 

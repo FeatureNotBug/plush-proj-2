@@ -26,5 +26,6 @@ Things to consider:
 - clean up bugs; 
   - why is the highlighting wonky?  
   - Why does compose glitch like that?
+  - turbolinks
   - Why does reload disable "Add New Link"?
 - user avatars

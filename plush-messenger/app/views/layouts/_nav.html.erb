@@ -16,7 +16,7 @@
             <li><%= link_to "Hello, #{current_user.name}", edit_user_registration_path %></li>
             <li><%= link_to "Browse", welcome_browse_path %></li>
             <li><%= link_to "Profile", current_user %></li>
-            <li><%= link_to "Inbox", mailbox_inbox_path %></li>
+            <li><%= link_to "Inbox", conversations_path %></li>
             <li><%= link_to "Logout", destroy_user_session_path, method: :delete %></li>
         <% else %>
             <li class="active"><%= link_to "Login", new_user_session_path %></li>

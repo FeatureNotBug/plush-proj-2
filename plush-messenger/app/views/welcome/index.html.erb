@@ -3,7 +3,7 @@
   <div class="container text-center jumbotron">
     <h1>Project Plushie</h1>
     <% if user_signed_in? %>
-        <%= link_to "New Conversation", new_conversation_path, class: "btn btn-info btn-lg" %>
+        <%= link_to "New Conversation", new_message_path, class: "btn btn-info btn-lg" %>
         <%= link_to "Go To Inbox", mailbox_inbox_path, class: "btn btn-primary btn-lg" %>
     <% else %>
         <p>A place where plush makers and buyers can meet and compare prices, making for more efficient searches</p>

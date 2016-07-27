@@ -4,6 +4,10 @@ Rails.application.routes.draw do
 
   get 'requests/new' => 'requests#new'
 
+  # this may be removed later if I can't make it work
+  resources :messages, only: [:new, :create]
+  post '/messages/send_message', :to => "messages#send_message", :as => "send_message"
+
   devise_for :users
   root 'welcome#index'
   get 'welcome/browse'
@@ -19,6 +23,8 @@ Rails.application.routes.draw do
   get "mailbox/trash" => "mailbox#trash", as: :mailbox_trash
 
   # conversations
+  resources :conversations, only: [:index, :show, :destroy]
+=begin
   resources :conversations do
     member do
       post :reply
@@ -26,5 +32,6 @@ Rails.application.routes.draw do
       post :untrash
     end
   end
+=end
 
 end
