@@ -12,7 +12,6 @@ This means that the site is for:
 
 Add tabs to User edit page: (will have to go into devise's stuff, right? ugh)
 - profile edit
-    - toggle button for user type? (does mean I have to add that field...)
     - logistics?
     - gallery
 
@@ -22,10 +21,9 @@ Also needed:
 - review system
 
 Things to consider:
+- HUGE PROBLEMS WITH ADD NEW LINK! (turbolinks issues, but disabling that will be bad for my other things, esp recipients field)
 - Forums? (Have to figure out how to set that up...)
 - clean up bugs; 
   - why is the highlighting wonky?  
-  - Why does compose glitch like that?
   - turbolinks
-  - Why does reload disable "Add New Link"?
 - user avatars
