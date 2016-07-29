@@ -5,6 +5,7 @@ class ConversationsController < ApplicationController
   before_action :get_box, only: [:index]
 
   def index
+    puts "=============================== BOX IS #{@box} ==================================="
     if @box.eql? "inbox"
       @conversations = @mailbox.inbox
     elsif @box.eql? "sent"
