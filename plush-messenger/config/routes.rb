@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   resources :requests
   resources :abouts
+  resources :reviews
 
   get 'requests/new' => 'requests#new'
 
