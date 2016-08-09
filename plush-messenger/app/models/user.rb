@@ -10,6 +10,8 @@ class User < ActiveRecord::Base
   ratyrate_rater
 
   has_one :about
+  has_many :reviews_about_me, foreign_key: "user_id", class_name: "Review"
+  has_many :reviews_by_me, foreign_key: "reviewer_id", class_name: "Review"
 
   def mailboxer_name
     self.name

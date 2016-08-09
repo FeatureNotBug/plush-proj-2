@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160720231018) do
+ActiveRecord::Schema.define(version: 20160729170634) do
 
   create_table "abouts", force: :cascade do |t|
     t.text    "aboutme"
@@ -113,6 +113,13 @@ ActiveRecord::Schema.define(version: 20160720231018) do
     t.decimal "height"
     t.decimal "width"
     t.text    "details"
+  end
+
+  create_table "reviews", force: :cascade do |t|
+    t.text    "comment"
+    t.integer "rating"
+    t.integer "user_id"
+    t.integer "reviewer_id"
   end
 
   create_table "users", force: :cascade do |t|

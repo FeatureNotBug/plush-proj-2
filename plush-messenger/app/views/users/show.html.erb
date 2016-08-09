@@ -4,6 +4,15 @@
   <%= link_to 'Edit Profile', users_edit_profile_path %>
 <% end %>
 
+<h3>About me:</h3>
+<% if (@user.about.nil?) %>
+  <h4>Links:</h4>
+<% else %>
+  <%= @user.about.aboutme %>
+  <h4>Links:</h4>
+  <%= @user.about.links %>
+<% end %>
+
 <p>Contact: <%= @user.email %></p>
 <% if @user != current_user %>
   <p>Interested? <%= link_to 'Initiate contact with this user', requests_new_path %></p>
@@ -22,12 +31,6 @@
 As a Seller: <%= rating_for @user, "as_seller", disable_after_rate: false, enable_half: true %>
 <br>
 As a Buyer: <%= rating_for @user, "as_buyer", disable_after_rate: false, enable_half: true %>
+<h4>Reviews:</h4>
+<%= link_to 'Rate this user', new_user_review_path(@user) %>
 
-<h3>About me:</h3>
-<% if (@user.about.nil?) %>
-  <h4>Links:</h4>
-<% else %>
-  <%= @user.about.aboutme %>
-  <h4>Links:</h4>
-  <%= @user.about.links %>
-<% end %>

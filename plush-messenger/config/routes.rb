@@ -1,11 +1,9 @@
 Rails.application.routes.draw do
   resources :requests
   resources :abouts
-  resources :reviews
 
   get 'requests/new' => 'requests#new'
 
-  # this may be removed later if I can't make it work
   resources :messages, only: [:new, :create]
   post '/messages/send_message', :to => "messages#send_message", :as => "send_message"
 
@@ -14,7 +12,9 @@ Rails.application.routes.draw do
   get 'welcome/browse'
   get 'users/edit_profile'
 
-  resources :users
+  resources :users do 
+    resources :reviews
+  end
 
   post '/rate' => 'rater#create', :as => 'rate'
 
