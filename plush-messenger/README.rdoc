@@ -1,5 +1,6 @@
 == README
 
-Simple rails app using devise, mailboxer, and ratyrate.  I don't know how you got here but you probably don't want to stay long because tons of things don't work here.
+A practice Rails app using devise, mailboxer, and ratyrate.  And also any other gems I come across that seem fun.
+I don't know how you got here but you probably don't want to stay long because this isn't particularly mesmerzing!
 
 Well, toodles!
